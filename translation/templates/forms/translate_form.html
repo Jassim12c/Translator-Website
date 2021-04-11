@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends "main.html" %}
+{% load translate_extras %}
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    {% block title %} حول انجليزي معرب إلى عربي {% endblock %}
+</head>
+<body>
+    {% block content %}
+
+    <div class="form-group">
+        <form method="POST" class="form-entry">
+            <section dir="rtl" lang="ar">
+                {% csrf_token %}
+                {{ form.sentence }}
+                {% for sen in sentence %}
+                    {% translate sen.sentence %}
+                {% endfor %}
+            </section>
+        <button type="reset" class="clear-btn" onclick="location.href='{% url 'main:clear' %}'">clear</button>
+        </form>
+        <!-- TODO: make button clear words -->
+    </div>
+
+    {% endblock %}
+</body>
+</html>
