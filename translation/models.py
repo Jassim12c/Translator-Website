@@ -1,7 +1,7 @@
 from django.db import models
 from django.urls import reverse
-from django.utils.translation import gettext_lazy as _
 
+# TODO: Put Translate in database.
 
 class Translate(models.Model):
     sentence = models.TextField(blank=False, verbose_name="sentence")
