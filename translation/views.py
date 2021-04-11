@@ -1,6 +1,4 @@
-
 from django.http import HttpResponseRedirect
-from django.core import serializers
 from django.shortcuts import render, redirect
 from django.urls import reverse
 
