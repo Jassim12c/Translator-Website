@@ -4,7 +4,7 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Translate(models.Model):
-    sentence = models.TextField(blank=False, help_text=_("Please enter a sentence"), verbose_name=_("sentence"))
+    sentence = models.TextField(blank=False, verbose_name="sentence")
 
     def get_absolute_url(self):
         return reverse('main:translate')

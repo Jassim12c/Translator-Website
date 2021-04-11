@@ -138,15 +138,6 @@ LOCALE_PATHS = (
    os.path.join(BASE_DIR, 'locale'),
 )
 
-LANGUAGES = (
-    ('ar', _('Arabic')),
-    ('en', _('English')),
-)
-
-MULTILINGUAL_LANGUAGES = (
-    "en-us",
-    "ar-kw",
-)
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

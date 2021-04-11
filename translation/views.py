@@ -20,8 +20,7 @@ def translate(request):
             sen = form.save(commit=False)
             sen.save()
             return HttpResponseRedirect(reverse('main:translate'))
-    qs_json = serializers.serialize('json', sentence)
-    return render(request, 'forms/translate_form.html', {'sentence': sentence, 'form': form, 'data': qs_json})
+    return render(request, 'forms/translate_form.html', {'sentence': sentence, 'form': form})
 
 def clear_sen(request):
     words = models.Translate.objects.all()
