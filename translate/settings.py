@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+import psycopg2
+import dj_database_url
 
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
@@ -81,12 +83,8 @@ WSGI_APPLICATION = 'translate.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd7h3bqskabmq4l',
-        'USER': 'diuoazdilsmdkp',
-        'PASSWORD': 'ad7987fd957dc95f456b6ebc2e6d2e93ebad1872079bd1bcc2b48d54b2e814a4',
-        'HOST': 'ec2-54-247-158-179.eu-west-1.compute.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -127,6 +125,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+DATABASE_URL = os.environ['DATABASE_URL']
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 STATIC_URL = '/static/'
 
