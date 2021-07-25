@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Home Page | Translate To Arabic {% endblock %}</title>
+    <link rel="stylesheet" href="static ">
+</head>
+<body>
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'main:translate' %}">Translate</a></li>
+        <li><a href="#"></a></li>
+    </ul>
+    <h1>Translate</h1>
+    {% block content %} {% endblock %}
+</body>
+</html>
