@@ -16,7 +16,7 @@
                 {% csrf_token %}
                 {{ form.sentence }}
                 {% for sen in sentence %}
-                    {% translate sen.sentence %}
+                    <p class="translated-text">{% translate sen.sentence %}</p>
                 {% endfor %}
             </section>
         <button type="reset" class="clear-btn" onclick="location.href='{% url 'main:clear' %}'">clear</button>

@@ -1,0 +1,28 @@
+/* || UNIVERSAL SELECTORS */
+
+body{
+    height: 100vh;
+    width: 65%;
+    margin: auto;
+    background: linear-gradient(180deg, rgba(194,195,34,1) 36%, rgba(17,16,13,1) 88%);
+}
+
+/* || SPECIFIC SELECTORS */
+
+.translated-text{
+    font-family: 'Acme', sans-serif;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 24px;
+}
+
+/* || MAIN CONTAINER */
+/* TODO: ADD FLEXBOX */
+/* TODO: ADD BOX SHADOW */
+
+#main-container {
+    background-color: rgb(138, 136, 136, 0.7);
+    border: 2px;
+    border-radius: 5px;
+    padding: 1em 2em 2em 2em;
+    margin-top: 1em;
+}
