@@ -1,5 +1,4 @@
 from django import template
-from .. import models
 
 import re
 
@@ -48,6 +47,7 @@ register = template.Library()
 
 @register.simple_tag
 def translate(sentence):
+    sentence = sentence.lower()
     for key in digraphs.keys():
         find_letter = re.compile(r'{}'.format(key))
         two_letters = find_letter.findall(sentence)
