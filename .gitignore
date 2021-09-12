@@ -160,9 +160,6 @@ Thumbs.db
 
 # secret
 .env
-db.sqlite3
 
-# tests
-C:\Users\Um_Ya\PycharmProjects\englishArabicTranslation\translate\translation\templatetags\test_tags.py
 
 # End of https://www.toptal.com/developers/gitignore/api/django
