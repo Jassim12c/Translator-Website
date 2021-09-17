@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', "PASS")
 # TODO: GET DEBUG FROM ENV
 # TODO: DO THE TRANSLATION USING JS SO THE DATA DOESNT GET SAVED
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', True)
+DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost']
 
