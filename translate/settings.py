@@ -122,8 +122,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-conn = psycopg2.connect(host=os.environ.get('DB_HOST'), user=os.environ.get('DB_USER'),
-                        password=os.environ.get('DB_PASS'), dbname=os.environ.get('DB_NAME'), sslmode='require')
 
 STATIC_URL = '/static/'
 
