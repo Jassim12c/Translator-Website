@@ -131,8 +131,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
-COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
-
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'assets'),
 )
