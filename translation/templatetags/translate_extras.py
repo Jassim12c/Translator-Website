@@ -65,4 +65,3 @@ def translate(sentence):
                 sentence = x
     # reshapes arabic letters to make them linked
     return sentence
-
