@@ -12,8 +12,8 @@ def translate(request):
     template = loader.get_template('forms/translate_form.html')
 
     if request.method == "POST":
-        value = request.POST['sentence']
-        return render(request, 'forms/translate_form.html', {'value': value, 'form': form})
+        sentence = request.POST['sentence']
+        return render(request, 'forms/translate_form.html', {'sentence': sentence, 'form': form})
     return HttpResponse(template.render({'form': form}, request))
 
 def clear_sen(request):

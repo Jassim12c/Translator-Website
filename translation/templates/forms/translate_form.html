@@ -16,7 +16,7 @@
                 <section dir="rtl" lang="ar">
                     {% csrf_token %}
                     {{ form.sentence }}
-                    <p class="translated-text">{% translate value %}</p>
+                    <p class="translated-text">{% translate sentence %}</p>
                 </section>
                 <p class="inner"></p>
                 <button type="submit" class="submit-btn">Submit</button>
@@ -26,3 +26,5 @@
     {% endblock %}
 </body>
 </html>
+
+
