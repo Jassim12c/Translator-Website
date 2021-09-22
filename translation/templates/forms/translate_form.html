@@ -16,12 +16,10 @@
                 <section dir="rtl" lang="ar">
                     {% csrf_token %}
                     {{ form.sentence }}
-                    {% for sen in sentence %}
-                        <p class="translated-text">{% translate sen.sentence %}</p>
-                    {% endfor %}
+                    <p class="translated-text">{% translate value %}</p>
                 </section>
                 <p class="inner"></p>
-                <button type="reset" class="clear-btn" onclick="location.href='{% url 'main:clear' %}'">clear</button>
+                <button type="submit" class="submit-btn">Submit</button>
             </form>
         </div>
         <script src="{% static 'js/main.js' %}"></script>

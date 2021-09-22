@@ -1,24 +1,20 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, redirect
-from django.urls import reverse
+from django.template import loader
 
 
 from . import models
 from . import forms
 
-
 def translate(request):
 
-    sentence = models.Translate.objects.all()
     form = forms.TranslateForm()
+    template = loader.get_template('forms/translate_form.html')
 
     if request.method == "POST":
-        form = forms.TranslateForm(request.POST)
-        if form.is_valid():
-            sen = form.save(commit=False)
-            sen.save()
-            return HttpResponseRedirect(reverse('main:translate'))
-    return render(request, 'forms/translate_form.html', {'sentence': sentence, 'form': form})
+        value = request.POST['sentence']
+        return render(request, 'forms/translate_form.html', {'value': value, 'form': form})
+    return HttpResponse(template.render({'form': form}, request))
 
 def clear_sen(request):
     words = models.Translate.objects.all()
