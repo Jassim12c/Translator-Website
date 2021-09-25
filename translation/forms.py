@@ -10,5 +10,5 @@ class TranslateForm(forms.ModelForm):
         )
 
         widgets = {
-            'sentence': forms.TextInput(attrs={'class': 'form-control'}),
+            'sentence': forms.TextInput(attrs={'class': 'form-control', 'autocomplete': 'off'}),
         }

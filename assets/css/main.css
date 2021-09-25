@@ -1,4 +1,69 @@
+/* || MOBILE FIRST APPROACH || */
+
+/* || ANIMATIONS */
+
+
 /* || UNIVERSAL SELECTORS */
+
+*{
+    box-sizing: border-box;
+}
+
+
+/* || NAV */
+
+#main-nav{
+    display: none;
+}
+
+#main-nav a{
+    text-decoration: none;
+}
+
+#main-nav ul{
+    list-style-type: none;
+}
+
+/* TODO: Make navigation for Mobile */
+/* | NAV BUTTON */
+
+input[type='checkbox']{
+    display: none;
+}
+
+#active:checked ~ #main-nav{
+    display: block;
+}
+
+.menu-btn{
+    font-size: 20px;
+}
+
+/* || SUBMIT BUTTON */
+
+.submit-btn{
+    display: block;
+    margin: auto;
+}
+
+/* || INPUT */
+
+#id_sentence{
+    display: block;
+    margin: auto;
+    background-color: #818C31;
+    border: 2px solid #818C31;
+    border-radius: 5px;
+    font-size: larger;
+    transition: transform 1.5s cubic-bezier(1,-0.72,.5,1.73);
+}
+
+#id_sentence:focus{
+    outline: none;
+    transform: scale(1.4, 1.4);
+}
+
+/* || ELEMENT SELECTOR */
 
 body{
     height: 100vh;
@@ -15,10 +80,25 @@ body{
     font-size: 24px;
 }
 
+#title{
+    font-size: 60px;
+    text-align: center;
+}
+
+
+
 /* || MAIN CONTAINER */
 /* TODO: ADD FLEXBOX */
 /* TODO: ADD BOX SHADOW */
 
+#main-container{
+    margin-top: 1.5em;
+}
+
+
+/* || MEDIA QUERIES */
+
+/*
 #main-container {
     background-color: rgb(138, 136, 136, 0.7);
     border: 2px;
@@ -26,3 +106,4 @@ body{
     padding: 1em 2em 2em 2em;
     margin-top: 1em;
 }
+*/
