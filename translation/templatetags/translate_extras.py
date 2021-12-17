@@ -32,18 +32,20 @@ letters_numbers = {
     '7': 'ح',
     '8': 'ق',
     '9': 'ص',
-    '9`': 'ض'
 }
 
 digraphs = {
     'sh': 'ش',
     'th': 'ذ',
     'ch': 'ج',
-    '6`': 'ظ',
-    '3`': 'غ',
+    "6'": 'ظ',
+    "3'": 'غ',
+    "9'": '1',
+    "t'": 'ث',
 }
 
 register = template.Library()
+
 
 @register.simple_tag
 def translate(sentence):
