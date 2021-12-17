@@ -14,9 +14,9 @@
     <script src="https://kit.fontawesome.com/1d9460069d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="main-container">
-        <header>
-            <input type="checkbox" id="active">
+    <div id="main-wrapper">
+        <div id="nav-wrapper">
+            <input type="checkbox" id="active" onclick="checkBoxCheck()">
             <label for="active" class="close"></label>
             <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
             <nav id="main-nav">
@@ -25,9 +25,14 @@
                     <li><a href="{% url 'main:translate' %}">Translate</a></li>
                 </ul>
             </nav>
-            <h1 id="title">Translate To Arabic</h1>
-         </header>
-        {% block content %} {% endblock %}
+        </div>
+        <div id="main-container">
+            <header>
+                <h1 id="title">Translate To Arabic</h1>
+             </header>
+            {% block content %} {% endblock %}
+        </div>
     </div>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

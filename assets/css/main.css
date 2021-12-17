@@ -2,6 +2,16 @@
 
 /* || ANIMATIONS */
 
+.body-color-transition{
+    transition: 1s;
+}
+
+.diagonal-right{
+  background:radial-gradient(farthest-side, black 48%,transparent 50%) no-repeat,
+    black;
+  background-size: 300% 300%;
+  background-position:top right;
+}
 
 /* || UNIVERSAL SELECTORS */
 
@@ -14,14 +24,21 @@
 
 #main-nav{
     display: none;
+    top-margin: 2em;
 }
 
 #main-nav a{
     text-decoration: none;
+    color: grey;
 }
 
 #main-nav ul{
     list-style-type: none;
+}
+
+#main-nav li{
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 /* TODO: Make navigation for Mobile */
@@ -32,11 +49,17 @@ input[type='checkbox']{
 }
 
 #active:checked ~ #main-nav{
-    display: block;
+    display: inline-block;
+    height: 100vh;
+    font-size: 30px;
 }
 
 .menu-btn{
-    font-size: 20px;
+    font-size: 25px;
+    color: grey;
+    position: absolute;
+    top: 8px;
+    left: 16px;
 }
 
 /* || SUBMIT BUTTON */
