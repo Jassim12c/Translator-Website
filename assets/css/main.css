@@ -1,4 +1,16 @@
-/* || MOBILE FIRST APPROACH || */
+/* ||| \MOBILE FIRST APPROACH/ ||| */
+
+/* || REMOVE STYLES || */
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 
 /* || ANIMATIONS */
 
@@ -68,6 +80,10 @@ input[type='checkbox']{
 .submit-btn{
     display: block;
     margin: auto;
+    background-color: rgb(242, 229, 50);
+    padding: 0.5em 0.9em;
+    border-radius: 10px;
+    font-family: 'Bakbak One', cursive;
 }
 
 /* || INPUT */

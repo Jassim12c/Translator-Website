@@ -46,12 +46,14 @@ digraphs = {
 
 register = template.Library()
 
+# TODO: find the words in brackets
 
 @register.simple_tag
 def translate(sentence):
     sentence = sentence.lower()
     for key in digraphs.keys():
         find_letter = re.compile(r'{}'.format(key))
+        find_square_bracket = re.compile(r'\(\w+\)')
         two_letters = find_letter.findall(sentence)
         grouped_letters = two_letters
 
