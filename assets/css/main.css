@@ -19,8 +19,8 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 .diagonal-right{
-    background-size: 300% 300%;
     background: black radial-gradient(farthest-side, black 48%, transparent 50%) no-repeat top right;
+    background-size: 300% 300%;
 
 }
 
