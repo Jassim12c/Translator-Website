@@ -1,0 +1,152 @@
+/* ||| \MOBILE FIRST APPROACH/ ||| */
+
+/* || REMOVE STYLES || */
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+/* || ANIMATIONS */
+
+.body-color-transition{
+    transition: 1s;
+}
+
+.diagonal-right{
+    background-size: 300% 300%;
+    background: black radial-gradient(farthest-side, black 48%, transparent 50%) no-repeat top right;
+}
+
+/* TODO: Animate the navigation buttons */
+
+.animate-nav:hover{
+    background-color: rgb(161, 144, 141, 0.2);
+    padding: 3px 3em;
+}
+
+.animate-nav{
+    border-radius: 10px;
+    transition: background-color 0.5s cubic-bezier(.25,-0.36,.59,1.44), padding 0.5s cubic-bezier(.25,-0.36,.59,1.44);
+}
+/* || UNIVERSAL SELECTORS */
+
+*{
+    box-sizing: border-box;
+}
+
+
+/* || NAV */
+
+#main-nav{
+    display: none;
+    top-margin: 2em;
+}
+
+#main-nav a{
+    text-decoration: none;
+    color: grey;
+    font-size: 2em;
+}
+
+#main-nav ul{
+    list-style-type: none;
+}
+
+#main-nav li{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* | NAV BUTTON */
+
+input[type='checkbox']{
+    display: none;
+}
+
+#active:checked ~ #main-nav{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font-size: 30px;
+}
+
+.menu-btn{
+    font-size: 2.5em;
+    color: #A09D30;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    transition: transform 1s ease-in, color 0.5s ease-in-out;
+}
+
+/* || SUBMIT BUTTON */
+
+.submit-btn{
+    display: block;
+    margin: auto;
+    background-color: rgb(242, 229, 50);
+    padding: 0.5em 0.9em;
+    border-radius: 10px;
+    font-family: 'Bakbak One', cursive;
+}
+
+/* || INPUT */
+
+#id_sentence{
+    display: block;
+    margin: auto;
+    background-color: #818C31;
+    border: 2px solid #818C31;
+    border-radius: 5px;
+    font-size: larger;
+    box-shadow: 0.1px -1px 3px 2px rgb(242 229 50);
+    transition: transform 1.5s cubic-bezier(1,-0.72,.5,1.73);
+}
+
+#id_sentence:focus{
+    outline: none;
+    transform: scale(1.4, 1.4);
+}
+
+/* || ELEMENT SELECTOR */
+
+body{
+    height: 100vh;
+    width: 65%;
+    margin: auto;
+    background: linear-gradient(180deg, rgba(194,195,34,1) 36%, rgba(17,16,13,1) 88%);
+}
+
+/* || SPECIFIC SELECTORS */
+
+.translated-text{
+    font-family: 'Acme', sans-serif;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    text-align: center;
+    font-size: 24px;
+}
+
+#title{
+    font-size: 5em;
+    text-align: center;
+    font-family: 'Bakbak One', cursive;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+/* || MAIN CONTAINER */
+
+#main-container{
+    margin-top: 1.5em;
+}
+
+
+/* || MEDIA QUERIES */
+
